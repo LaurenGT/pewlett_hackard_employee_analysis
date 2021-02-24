@@ -1,3 +1,11 @@
+-- drop all tables
+DROP TABLE IF EXISTS dept_emp;
+DROP TABLE IF EXISTS dept_manager;
+DROP TABLE IF EXISTS salaries;
+DROP TABLE IF EXISTS departments;
+DROP TABLE IF EXISTS employees;
+DROP TABLE IF EXISTS titles;
+
 -- create titles table from titles.csv
 CREATE TABLE titles (
     title_id VARCHAR(10) NOT NULL PRIMARY KEY,
@@ -34,7 +42,7 @@ CREATE TABLE departments (
 CREATE TABLE dept_emp (
     emp_no INT NOT NULL,
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
-    dept_no VARCHAR(10) NOT NULL
+    dept_no VARCHAR(10) NOT NULL,
     FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
     PRIMARY KEY (emp_no, dept_no)
 )
@@ -43,6 +51,7 @@ CREATE TABLE dept_emp (
 -- create dept_manager table from dept_manager.csv
 -- multiple managers for each department
 -- no duplicate entries combining dept_no and emp_no
+-- unique list of emp_no
 -- composite key of dept_no and emp_no for primary key
 CREATE TABLE dept_manager (
     dept_no VARCHAR(10) NOT NULL,
