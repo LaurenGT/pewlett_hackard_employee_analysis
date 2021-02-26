@@ -4,12 +4,12 @@ This analysis looks at Pewlett Hackard employee data from the 1980s and the 1990
 
 After creating a new database in pgAdmin and opening a SQL Query, capy, paste and run the code in this [schema file](schema.sql) to generate your tables, column names, primary keys and foreign keys. Once you have completed this step, import the CSVs linked below to their corresponding tables in the following order identifying that each has a header and the delimiter is a comma:
 
-1. [titles](Resouces/titles.csv)
-2. [employees](Resouces/employees.csv)
-3. [departments](Resouces/departments.csv)
-4. [dept_emp](Resouces/dept_emp.csv)
-5. [dept_manager](Resouces/dept_manager.csv)
-6. [salaries](Resouces/salaries.csv)
+1. [titles](Resources/titles.csv)
+2. [employees](Resources/employees.csv)
+3. [departments](Resources/departments.csv)
+4. [dept_emp](Resources/dept_emp.csv)
+5. [dept_manager](Resources/dept_manager.csv)
+6. [salaries](Resources/salaries.csv)
 
 In this [queries file](queries.sql), there are eight different code blocks available to analyze the data tables. 
 
