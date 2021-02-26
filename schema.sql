@@ -16,7 +16,7 @@ CREATE TABLE titles (
 -- create employees table from emplyees.csv
 CREATE TABLE employees (
     emp_no INT NOT NULL PRIMARY KEY,
-    emp_title_id VARCHAR(10) NOT NULL,
+    emp_title_id VARCHAR(5) NOT NULL,
     FOREIGN KEY (emp_title_id) REFERENCES titles(title_id),
     birth_date DATE NOT NULL,
     first_name VARCHAR(255) NOT NULL,
@@ -55,7 +55,8 @@ CREATE TABLE dept_manager (
  
 -- create salaries table from salaries.csv
 CREATE TABLE salaries (
-    emp_no INT NOT NULL PRIMARY KEY,
-    salary INT NOT NULL
+    emp_no INT NOT NULL,
+    salary INT NOT NULL,
+	FOREIGN KEY (emp_no) REFERENCES employees (emp_no)
 )
 ;
